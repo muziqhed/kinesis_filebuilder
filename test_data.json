@@ -1,0 +1,38 @@
+{
+	"shard_list": [{
+			"putEndpoint": "https://www.example.com/textfile.txt",
+			"partition": 0,
+			"partitionCount": 2,
+			"content": "aGVsbG8gd29ybGQh"
+		},
+		{
+			"putEndpoint": "https://www.example.com/textfile.txt",
+			"partition": 1,
+			"partitionCount": 2,
+			"content": "aGVsbG8gd29ybGQh"
+		}
+	],
+	"get_file_result": {
+		"https://www.example.com/textfile.txt": [{
+			"putEndpoint": "https://www.example.com/textfile.txt",
+			"partition": 0,
+			"partitionCount": 2,
+			"content": "hello world!"
+		}, {
+			"putEndpoint": "https://www.example.com/textfile.txt",
+			"partition": 1,
+			"partitionCount": 2,
+			"content": "hello world!"
+		}]
+	},
+  "write_file_result":{
+      "filepath": "/tmp/textfile.txt",
+      "file_contents": "hello world!hello world!"
+  },
+  "decode_shard": {
+      "putEndpoint" : "https://www.example.com/textfile.txt",
+      "partition": 0,
+      "partitionCount": 10,
+      "content" : "aGVsbG8gd29ybGQh"
+  }
+}
